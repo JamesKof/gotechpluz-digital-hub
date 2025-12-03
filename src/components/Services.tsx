@@ -6,49 +6,49 @@ const Services = () => {
     {
       icon: Code,
       title: "Web Development",
-      description: "Front-end and Back-end Development, Custom Website or App Development",
+      description: "Front-end and back-end development, custom websites and web applications.",
       color: "primary"
     },
     {
       icon: Megaphone,
       title: "Digital Marketing",
-      description: "Social Media Marketing, SEO, SEM, SMM, Content Marketing Strategies",
+      description: "Social media marketing, SEO, SEM, and content marketing strategies.",
       color: "accent"
     },
     {
       icon: Palette,
       title: "Graphic Design",
-      description: "Logo Design, Branding Collateral, Web Graphics, Print Design",
+      description: "Logo design, brand collateral, web graphics, and print design.",
       color: "primary"
     },
     {
       icon: ShoppingCart,
       title: "E-commerce Solutions",
-      description: "Robust Online Shopping Experiences, Payment Integration",
+      description: "Robust online shopping experiences with secure payment integration.",
       color: "accent"
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "iOS and Android Applications, Cross-platform Solutions",
+      description: "Native iOS and Android apps, plus cross-platform solutions.",
       color: "primary"
     },
     {
       icon: Video,
       title: "Media Production",
-      description: "Video Production, Animation, Live Streaming Services",
+      description: "Video production, animation, and live streaming services.",
       color: "accent"
     },
     {
       icon: Search,
       title: "Advertising",
-      description: "Branding, Creative Designs, Media Purchasing",
+      description: "Branding, creative design, and media buying.",
       color: "primary"
     },
     {
       icon: BarChart3,
       title: "IT Consultancy",
-      description: "Management Systems, POS Systems, Custom Software Solutions",
+      description: "Management systems, POS systems, and custom software solutions.",
       color: "accent"
     }
   ];

@@ -55,7 +55,7 @@ const Contact = () => {
               Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ready to elevate your digital experience? Let's discuss your project
+              Ready to elevate your digital experience? Let's discuss your project.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ const Contact = () => {
                         +233 247 233 996 (WhatsApp)
                       </a>
                     </p>
-                    <p className="text-muted-foreground text-sm">Alt: 0207292967</p>
+                    <p className="text-muted-foreground text-sm">Alternate line: 020 729 2967</p>
                   </div>
                 </div>
               </Card>
