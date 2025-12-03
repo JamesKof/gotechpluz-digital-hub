@@ -28,7 +28,18 @@ const Footer = () => {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>0247233996</li>
+                <li>
+                  <a
+                    href={`https://wa.me/233247233996?text=${encodeURIComponent(
+                      "Hi Gotechpluz, I\'d like to inquire about your services."
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    WhatsApp: +233 247 233 996
+                  </a>
+                </li>
                 <li>0207292967</li>
                 <li>info@gotechpluz.com</li>
                 <li>La Tebu Cr, Accra-Ghana</li>

@@ -47,8 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Email sent successfully:", emailResponse);
 
-    // Send WhatsApp notification
-    const whatsappNumber = "0247233996";
+    const whatsappNumber = "233247233996";
     const whatsappMessage = encodeURIComponent(
       `🔔 New Project Inquiry\n\n` +
       `Name: ${data.name}\n` +

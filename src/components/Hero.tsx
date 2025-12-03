@@ -9,6 +9,14 @@ const Hero = () => {
     }
   };
 
+  const openWhatsAppChat = () => {
+    const whatsappNumber = "233247233996";
+    const whatsappMessage = encodeURIComponent(
+      "Hi Gotechpluz, I\'d like to discuss a project."
+    );
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank");
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
@@ -73,10 +81,14 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={openWhatsAppChat}
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
               <Phone className="h-4 w-4 text-primary" />
-              <span>0247233996 | 0207292967</span>
-            </div>
+              <span>WhatsApp: +233 247 233 996</span>
+            </button>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground"></div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-primary" />
