@@ -22,7 +22,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Mission</h3>
               <p className="text-muted-foreground">
-                Empowering Global Success Through Innovative Digital Solutions
+                Empowering global success through innovative digital solutions.
               </p>
             </Card>
 
@@ -32,7 +32,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Vision</h3>
               <p className="text-muted-foreground">
-                To be leaders in shaping a dynamic and innovative digital landscape, redefining success benchmarks
+                To be leaders in shaping a dynamic and innovative digital landscape, redefining success benchmarks for our global clientele.
               </p>
             </Card>
 

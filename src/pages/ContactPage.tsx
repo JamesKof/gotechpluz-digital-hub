@@ -15,7 +15,7 @@ const ContactPage = () => {
               Get in <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Ready to elevate your digital presence? Let's start a conversation
+              Ready to elevate your digital presence? Let's start a conversation.
             </p>
           </div>
         </div>

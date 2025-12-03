@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-            <p className="text-primary font-semibold text-sm">Technology Solution Providers • Local with Global Influence</p>
+            <p className="text-primary font-semibold text-sm">Technology Solutions Partner • Local Roots, Global Impact</p>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -46,7 +46,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Connecting the dots between technology, marketing, and creativity to help you engage customers and accelerate revenue growth. We craft out-of-the-box solutions for businesses worldwide.
+            Connecting the dots between technology, marketing, and creativity to help you engage customers and accelerate revenue growth. We craft out-of-the-box digital solutions for businesses worldwide.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

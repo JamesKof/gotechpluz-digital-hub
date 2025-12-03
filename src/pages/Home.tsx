@@ -21,8 +21,8 @@ const Home = () => {
     },
     {
       icon: TrendingUp,
-      title: "Revenue-Driven Results",
-      description: "Goal-oriented solutions that help you make more money constantly and improve business operations"
+      title: "Results-Driven Growth",
+      description: "Goal-oriented solutions that help you grow revenue consistently and improve business operations"
     }
   ];
 
@@ -54,19 +54,18 @@ const Home = () => {
               Digital Solutions That <span className="bg-gradient-primary bg-clip-text text-transparent">Transform</span> Your Business
             </h2>
             <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
-              We recreate traditional business processes and simplify complex activities through innovative 
-              technology solutions. Our goal-oriented approach helps businesses worldwide access new markets, 
+              We reimagine traditional business processes and simplify complex operations through innovative digital solutions. Our goal-oriented approach helps businesses worldwide access new markets,
               increase operational efficiency, and dramatically accelerate revenue growth.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="p-6 bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors">
                 <div className="text-4xl font-bold text-primary mb-2">$2M+</div>
-                <p className="text-muted-foreground">Revenue Generated for Clients</p>
+                <p className="text-muted-foreground">Client Revenue Generated</p>
               </div>
               <div className="p-6 bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors">
                 <div className="text-4xl font-bold text-primary mb-2">300%</div>
-                <p className="text-muted-foreground">Average ROI Increase</p>
+                <p className="text-muted-foreground">Average ROI Uplift</p>
               </div>
               <div className="p-6 bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors">
                 <div className="text-4xl font-bold text-primary mb-2">5+</div>

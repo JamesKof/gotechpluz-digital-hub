@@ -63,7 +63,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-muted-foreground">
-                  Empowering Global Success Through Innovative Digital Solutions that transform businesses and create lasting impact
+                  Empowering global success through innovative digital solutions that transform businesses and create lasting impact.
                 </p>
               </Card>
 
@@ -73,7 +73,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-muted-foreground">
-                  To lead the digital revolution, shaping an innovative landscape that redefines success standards for our global clientele
+                  To lead the digital revolution, shaping an innovative landscape that redefines success benchmarks for our global clientele.
                 </p>
               </Card>
 
@@ -143,7 +143,7 @@ const AboutPage = () => {
                 Our <span className="bg-gradient-primary bg-clip-text text-transparent">Approach</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                You need a new approach to generating attention, earning customer loyalty, and proving the value of your investment. That's where we come in—with a systematic methodology that delivers results.
+                You need a new approach to capturing attention, earning customer loyalty, and proving the value of every investment. That's where we come in—with a systematic methodology that delivers measurable results.
               </p>
             </div>
 

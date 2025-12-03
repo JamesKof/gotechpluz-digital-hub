@@ -65,10 +65,10 @@ const PortfolioPage = () => {
       challenge: "Ghana EXIM Bank needed a modern, secure platform to serve exporters, provide facility applications, and deliver real-time information about trade finance products while maintaining government-level security standards.",
       solution: "We built a comprehensive web platform with secure facility applications, product showcases, real-time updates, integrated payment systems, and a responsive design optimized for mobile banking.",
       results: [
-        { metric: "300%", label: "Online Applications" },
-        { metric: "65%", label: "Processing Speed" },
-        { metric: "4.9/5", label: "User Satisfaction" },
-        { metric: "24/7", label: "Service Availability" }
+        { metric: "300%", label: "Increase in online applications" },
+        { metric: "65%", label: "Processing speed improvement" },
+        { metric: "4.9/5", label: "User satisfaction rating" },
+        { metric: "24/7", label: "Service availability" }
       ],
       technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Security Protocols"],
       heroImage: ghanaEximHero,
@@ -91,10 +91,10 @@ const PortfolioPage = () => {
       challenge: "The NHIS needed a modern digital platform to manage millions of members, provide registration services, facility locators, and deliver health information while ensuring data security and accessibility.",
       solution: "We developed a full-featured healthcare platform with member registration, facility finder, claims management, mobile-responsive design, and secure patient data handling.",
       results: [
-        { metric: "2M+", label: "Active Members" },
-        { metric: "4000+", label: "Facilities Connected" },
-        { metric: "95%", label: "Disease Coverage" },
-        { metric: "16", label: "Regions Served" }
+        { metric: "2M+", label: "Active members" },
+        { metric: "4000+", label: "Facilities connected" },
+        { metric: "95%", label: "Disease coverage" },
+        { metric: "16", label: "Regions served" }
       ],
       technologies: ["React", "TypeScript", "Tailwind CSS", "PostgreSQL", "HIPAA Compliance"],
       heroImage: healthConnectHero,
@@ -117,10 +117,10 @@ const PortfolioPage = () => {
       challenge: "GIS needed a comprehensive digital platform for visa applications, permit processing, status tracking, and providing information to citizens and visitors while maintaining high security standards.",
       solution: "We created a secure government portal with online applications, document upload, real-time status tracking, appointment booking, multilingual support, and integrated payment systems.",
       results: [
-        { metric: "400%", label: "Online Applications" },
-        { metric: "70%", label: "Processing Time Reduction" },
-        { metric: "30M+", label: "Population Served" },
-        { metric: "24/7", label: "Service Access" }
+        { metric: "400%", label: "Increase in online applications" },
+        { metric: "70%", label: "Processing time reduction" },
+        { metric: "30M+", label: "Population served" },
+        { metric: "24/7", label: "Service access" }
       ],
       technologies: ["React", "TypeScript", "Government Security Standards", "PostgreSQL", "Payment Gateway"],
       heroImage: transitGatewayHero,
@@ -143,10 +143,10 @@ const PortfolioPage = () => {
       challenge: "Alor & Associates needed a professional digital presence to showcase their consulting services, build credibility, and attract corporate clients in Ghana's competitive market.",
       solution: "We built a sophisticated corporate website with service showcases, case study galleries, client testimonials, contact forms, and a professional design reflecting their industry expertise.",
       results: [
-        { metric: "200+", label: "Active Clients" },
-        { metric: "150%", label: "Lead Generation" },
-        { metric: "95%", label: "Client Satisfaction" },
-        { metric: "15+", label: "Years Experience" }
+        { metric: "200+", label: "Active clients" },
+        { metric: "150%", label: "Lead generation increase" },
+        { metric: "95%", label: "Client satisfaction" },
+        { metric: "15+", label: "Years of experience" }
       ],
       technologies: ["React", "Tailwind CSS", "TypeScript", "SEO Optimization", "Analytics"],
       heroImage: alorConnectHero,
@@ -169,10 +169,10 @@ const PortfolioPage = () => {
       challenge: "Viva Health needed a digital platform to showcase programs, accept donations, recruit volunteers, share impact stories, and manage community health initiatives efficiently.",
       solution: "We developed a comprehensive non-profit platform with donation integration, volunteer management, program showcases, blog features, gallery, and mobile-optimized design.",
       results: [
-        { metric: "6+", label: "Years Impact" },
-        { metric: "1000+", label: "Lives Touched" },
-        { metric: "50+", label: "Active Volunteers" },
-        { metric: "300%", label: "Donation Increase" }
+        { metric: "6+", label: "Years of impact" },
+        { metric: "1000+", label: "Lives touched" },
+        { metric: "50+", label: "Active volunteers" },
+        { metric: "300%,", label: "Donation increase" }
       ],
       technologies: ["React", "Stripe Donations", "Content Management", "Mobile Responsive", "SEO"],
       heroImage: vivaHealthHero,
@@ -195,10 +195,10 @@ const PortfolioPage = () => {
       challenge: "Prudential needed to modernize their digital presence with an enterprise-grade platform for policy management, claims processing, premium payments, and customer engagement.",
       solution: "We delivered a comprehensive insurance platform with product showcases, online applications, premium calculators, secure policy portals, payment integration, and responsive design.",
       results: [
-        { metric: "200%", label: "Online Applications" },
-        { metric: "150%", label: "Customer Engagement" },
-        { metric: "60%", label: "Processing Efficiency" },
-        { metric: "4.7/5", label: "Customer Rating" }
+        { metric: "200%", label: "Increase in online applications" },
+        { metric: "150%", label: "Customer engagement" },
+        { metric: "60%", label: "Processing efficiency" },
+        { metric: "4.7/5", label: "Customer rating" }
       ],
       technologies: ["Enterprise CMS", "Payment Gateway", "Customer Portal", "Security Compliance", "Analytics"],
       heroImage: prudentialHero,
