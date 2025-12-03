@@ -17,10 +17,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const whatsappNumber = "233247233996";
+    const whatsappMessage = encodeURIComponent(
+      `📩 New Contact Message\n\n` +
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      (formData.phone ? `Phone: ${formData.phone}\n` : "") +
+      `Message: ${formData.message}`
+    );
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank");
+
     toast({
       title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      description: "We\'ve opened a WhatsApp chat so we can respond even faster.",
     });
+
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -52,9 +65,20 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Phone</h3>
-                    <p className="text-muted-foreground text-sm mb-1">0247233996</p>
-                    <p className="text-muted-foreground text-sm">0207292967</p>
+                    <h3 className="font-bold mb-2">Phone &amp; WhatsApp</h3>
+                    <p className="text-muted-foreground text-sm mb-1">
+                      <a
+                        href={`https://wa.me/233247233996?text=${encodeURIComponent(
+                          "Hi Gotechpluz, I\'d like to inquire about your services."
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline"
+                      >
+                        +233 247 233 996 (WhatsApp)
+                      </a>
+                    </p>
+                    <p className="text-muted-foreground text-sm">Alt: 0207292967</p>
                   </div>
                 </div>
               </Card>
