@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 
 const ProjectInquiryForm = () => {
   const { toast } = useToast();
@@ -159,10 +159,19 @@ const ProjectInquiryForm = () => {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-primary hover:opacity-90"
+          className="w-full bg-gradient-primary hover:opacity-90 transition-all hover-scale"
           size="lg"
         >
-          {isSubmitting ? "Sending..." : "Send Inquiry"} <Send className="ml-2 h-4 w-4" />
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              Send Inquiry <Send className="ml-2 h-4 w-4" />
+            </>
+          )}
         </Button>
       </form>
     </Card>

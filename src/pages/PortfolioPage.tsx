@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -20,6 +20,7 @@ import {
   Send
 } from "lucide-react";
 import ProjectInquiryForm from "@/components/ProjectInquiryForm";
+import PortfolioSkeleton from "@/components/PortfolioSkeleton";
 import ghanaEximHero from "@/assets/portfolio-ghana-exim.jpg";
 import healthConnectHero from "@/assets/portfolio-health-connect.jpg";
 import transitGatewayHero from "@/assets/portfolio-transit-gateway.jpg";
@@ -29,6 +30,16 @@ import prudentialHero from "@/assets/portfolio-prudential.jpg";
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for images and content
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, [selectedCategory]);
 
   const categories = [
     "All",
@@ -257,15 +268,24 @@ const PortfolioPage = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-background sticky top-0 z-10 border-b border-border">
+      <section className="py-8 bg-background sticky top-0 z-10 border-b border-border backdrop-blur-sm bg-background/95">
         <div className="container mx-auto px-4">
           <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? "bg-gradient-primary" : ""}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setIsLoading(true);
+                }}
+                className={`
+                  transition-all duration-300 whitespace-nowrap
+                  ${selectedCategory === category 
+                    ? "bg-gradient-primary scale-105" 
+                    : "hover:border-primary/50 hover:scale-105"
+                  }
+                `}
               >
                 {category}
               </Button>
@@ -275,23 +295,50 @@ const PortfolioPage = () => {
       </section>
 
       {/* Featured Case Studies */}
-      {filteredProjects.map((study, index) => {
-        const Icon = study.icon;
-        return (
-          <section 
-            key={study.id} 
-            className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'}`}
-          >
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
+      {isLoading ? (
+        // Show multiple skeletons while loading
+        <>
+          <section className="py-20 bg-background">
+            <PortfolioSkeleton />
+          </section>
+          <section className="py-20 bg-muted/30">
+            <PortfolioSkeleton />
+          </section>
+        </>
+      ) : filteredProjects.length === 0 ? (
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-md mx-auto animate-fade-in">
+              <p className="text-xl text-muted-foreground mb-6">
+                No projects found in this category yet.
+              </p>
+              <Button 
+                onClick={() => setSelectedCategory("All")}
+                variant="outline"
+              >
+                View All Projects
+              </Button>
+            </div>
+          </div>
+        </section>
+      ) : (
+        filteredProjects.map((study, index) => {
+          const Icon = study.icon;
+          return (
+            <section 
+              key={study.id} 
+              className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'} animate-fade-in`}
+            >
+              <div className="container mx-auto px-4">
+                <div className="max-w-6xl mx-auto">
                 <Card className="overflow-hidden border-border hover:border-primary/30 transition-all duration-300">
                   {/* Hero Image */}
                   {study.heroImage && (
-                    <div className="relative h-80 overflow-hidden">
+                    <div className="relative h-80 overflow-hidden group">
                       <img 
                         src={study.heroImage} 
                         alt={study.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                     </div>
@@ -363,7 +410,8 @@ const PortfolioPage = () => {
                         {study.results.map((result, idx) => (
                           <div 
                             key={idx}
-                            className="text-center p-6 bg-muted/50 rounded-2xl hover:bg-muted transition-colors"
+                            className="text-center p-6 bg-muted/50 rounded-2xl hover:bg-muted transition-all duration-300 animate-fade-in hover-scale"
+                            style={{ animationDelay: `${idx * 0.1}s` }}
                           >
                             <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${study.color} bg-clip-text text-transparent mb-2`}>
                               {result.metric}
@@ -414,7 +462,8 @@ const PortfolioPage = () => {
             </div>
           </section>
         );
-      })}
+      })
+      )}
 
       {/* Additional Projects Grid */}
       <section className="py-20 bg-background">
@@ -435,10 +484,10 @@ const PortfolioPage = () => {
                 return (
                   <Card 
                     key={project.title}
-                    className="p-6 hover:shadow-medium transition-all duration-300 group border-border hover:border-primary/30 animate-fade-in-up"
+                    className="p-6 hover:shadow-medium transition-all duration-300 group border-border hover:border-primary/30 animate-fade-in hover-scale cursor-pointer"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-12 h-12 mb-4 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 mb-4 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">
@@ -466,11 +515,13 @@ const PortfolioPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Have a <span className="bg-gradient-primary bg-clip-text text-transparent">Similar Project</span>?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
                 Tell us about your project and we'll get back to you within 24 hours. All inquiries are also sent to our WhatsApp for instant updates.
               </p>
             </div>
-            <ProjectInquiryForm />
+            <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <ProjectInquiryForm />
+            </div>
           </div>
         </div>
       </section>
